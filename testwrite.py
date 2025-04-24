@@ -83,7 +83,7 @@ def append_message_to_image(image_path, message, output_path):
 
 # Beispielaufruf
 
-teext="Dies ist Tims geheime Botschaft ️"
+teext="https://github.com/FunPhantasie/Loki ️"
 bild1="Contrast.jpg"
 bild2="ContrastGhibli.jpg"
 MetaData(bild1)
