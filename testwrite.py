@@ -47,7 +47,7 @@ def MetaData(image_path):
     exif_dict['Exif'][piexif.ExifIFD.DateTimeDigitized] = fantasy_time
     #Bug fixing
     exif_dict['0th'][piexif.ImageIFD.Make] = b"FantasyCam"
-    exif_dict['0th'][piexif.ImageIFD.Model] = b"ElderWand v3"
+    exif_dict['0th'][piexif.ImageIFD.Model] = b"If Nothing Crys out load, Change the Date to 1.December 2023."
     # GPS data (example: lat=48.8584, lon=2.2945 for Eiffel Tower)
     from fractions import Fraction
     def to_deg(value):
@@ -57,10 +57,19 @@ def MetaData(image_path):
         sec = int((min_float - min) * 60 * 100)
         return ((deg, 1), (min, 1), (sec, 100))
 
+    def dms_to_rational(degree, minute, second):
+        return [
+            (int(degree), 1),
+            (int(minute), 1),
+            (int(second * 100), 100)  # keeping two decimals for seconds
+        ]
+
+    # Coordinates: 34°03'17.8"N 118°13'32.2"W
     exif_dict['GPS'][piexif.GPSIFD.GPSLatitudeRef] = 'N'.encode()
-    exif_dict['GPS'][piexif.GPSIFD.GPSLatitude] = to_deg(48.8584)
-    exif_dict['GPS'][piexif.GPSIFD.GPSLongitudeRef] = 'E'.encode()
-    exif_dict['GPS'][piexif.GPSIFD.GPSLongitude] = to_deg(2.2945)
+    exif_dict['GPS'][piexif.GPSIFD.GPSLatitude] = dms_to_rational(34, 3, 17.8)
+
+    exif_dict['GPS'][piexif.GPSIFD.GPSLongitudeRef] = 'W'.encode()
+    exif_dict['GPS'][piexif.GPSIFD.GPSLongitude] = dms_to_rational(118, 13, 32.2)
 
     # Convert dict back to bytes
     exif_bytes = piexif.dump(exif_dict)
@@ -88,7 +97,8 @@ bild1="Contrast.jpg"
 bild2="ContrastGhibli.jpg"
 MetaData(bild1)
 MetaData(bild2)
-append_message_to_image(bild1, teext, "MetaContrastMsg.jpg")
-append_message_to_image(bild2, teext, "MetaContrastGhibliMsg.jpg")
+append_message_to_image(bild1, teext, "Fertig.jpg")
+append_message_to_image(bild2, teext, "FertigGhibli.jpg")
 fantasy_time_string = "2000:12:22 20:00:00"
-set_file_time_windows("MetaContrastMsg.jpg", fantasy_time_string)
+set_file_time_windows("Fertig.jpg", fantasy_time_string)
+set_file_time_windows("FertigGhibli.jpg", fantasy_time_string)
