@@ -1,0 +1,64 @@
+{
+  "domain": "minecraft",
+  "name": "logs",
+  "objects": {
+    "items": [
+      "logs", "sticks", "planks", "table", "cobblestone", "stone-pickaxe",
+      "wooden-pickaxe", "diamond-pickaxe", "furnace", "iron-ore",
+      "iron-ingots", "iron-pickaxe", "diamonds", "diamond-sword","hand"
+    ],
+    "source": ["wood", "iron", "diamond-ore","stone"]
+  },
+  "init": [
+    "cobblestone needs stone-pickaxe",
+    "cobblestone needs wooden-pickaxe",
+    "cobblestone needs diamond-pickaxe",
+    "iron-ingots needs stone-pickaxe",
+    "iron-ingots needs diamond-pickaxe",
+    "diamonds needs iron-pickaxe",
+    "iron-ore needs furnace",
+    "wooden-pickaxe needs sticks",
+    "wooden-pickaxe needs planks",
+    "sticks needs planks",
+    "planks needs logs",
+    "wood needs hand",
+    "wood produce logs", 
+    
+    "stone produce cobblestone",
+    "logs produce planks",
+    "planks produce sticks",
+    "hand"
+
+   
+  ],
+  "goal": ["logs"]
+}
+
+
+{
+  "name": "minecraft",
+  "types": ["items", "source"],
+  "actions": {
+    "mine": {
+      "parameters": {
+        "?tool": "items",
+        "?source": "source",
+        "?product": "items"
+      },
+      "preconditions_pos": ["?source needs ?tool"],
+      "preconditions_neg": [],
+      "effects_pos": ["?source produce ?product","?product"],
+      "effects_neg": []
+    },
+    "craft": {
+      "parameters": {
+        "?input": "items",
+        "?output": "items"
+      },
+      "preconditions_pos": ["?output needs ?input", "?input"],
+      "preconditions_neg": ["?output"],
+      "effects_pos": ["?output"],
+      "effects_neg": ["?input"]
+    }
+  }
+}
