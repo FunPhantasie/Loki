@@ -1,21 +1,20 @@
-#Clue 2 On Github Readme
-If you made it so far,
-Congratulations — I will now
-lower the bar.
-
-The image tags might show
-some information you maybe didn’t know.
-You knew? Okay, then no...
-(Sad noises)
-
-Go further — the choice is yours.
-There are 2 open paths:
-The maze that contains math,
-or the scary virus
-that will certainly destroy your BIOS.
-
-In order to defeat it:
-Copy  it.
-Chat with it.
-Cry with it.
+If you made it so far,<br/> 
+Congratulations — I will now<br/>
+lower the bar.<br/>
+<br/>
+The image tags might show<br/>
+some information you maybe didn’t know.<br/>
+You knew? Okay, then no...<br/>
+(Sad noises)<br/>
+<br/>
+Go further — the choice is yours.<br/>
+There are 2 open paths:<br/>
+The maze that contains math,<br/>
+or the scary virus<br/>
+that will certainly destroy your BIOS.<br/>
+<br/>
+In order to defeat it:<br/>
+Copy  it.<br/>
+Chat with it.<br/>
+Cry with it.<br/>
 Cracking hits. 
