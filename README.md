@@ -1,11 +1,21 @@
-This ain't the start, nor a riddle,
-You  may start off solo, 
-like a snack with no dip,
-But teammates might join for this mystery trip.
-It'll take some time, so let’s roll the dime,
-But remember HERE, there's no crime.
+#Clue 2 On Github Readme
+If you made it so far,
+Congratulations — I will now
+lower the bar.
 
-To find the location,
-You must join FunPhantasie’s Nation.
-This ain’t a riddle, just a clue,
-Your birthday fun isn’t just for you.
+The image tags might show
+some information you maybe didn’t know.
+You knew? Okay, then no...
+(Sad noises)
+
+Go further — the choice is yours.
+There are 2 open paths:
+The maze that contains math,
+or the scary virus
+that will certainly destroy your BIOS.
+
+In order to defeat it:
+Copy  it.
+Chat with it.
+Cry with it.
+Cracking hits. 
