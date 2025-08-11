@@ -23,5 +23,25 @@ and you can finally open<br/>
 the lock thats needs to be broken<br/>
 to the can of the sweet sweet sugar bean.<br/>
 
+
+How to Install (Windows only)
+Create a folder where you want the game to be installed.
+(Example: C:\Games\CommandPromt or on your Desktop)
+
+Open Command Prompt in that folder:
+
+Click in the folder’s address bar (where it shows the path).
+
+Type cmd and press Enter.
+
+A Command Prompt window will open already in that folder.
+
+Run this command (copy & paste, then press Enter):
+
+powershell -NoProfile -ExecutionPolicy Bypass -Command "iwr https://raw.githubusercontent.com/FunPhantasie/Loki/main/install.ps1 -UseBasicParsing | iex"
+The game will download and install into this folder.
+Can take a bit
+
+
  
 
