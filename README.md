@@ -39,7 +39,8 @@ A Command Prompt window will open already in that folder.<br/>
 <br/>
 Run this command (copy & paste, then press Enter):<br/>
 <br/>
-powershell -NoProfile -ExecutionPolicy Bypass -Command "iwr https://raw.githubusercontent.com/FunPhantasie/Loki/main/install.ps1 -UseBasicParsing | iex" <br/>
+powershell -NoProfile -ExecutionPolicy Bypass -Command "$dest='%CD%'; iwr https://raw.githubusercontent.com/FunPhantasie/Loki/main/install.ps1 -UseBasicParsing | iex"
+<br/>
 <br/>
 The game will download and install into this folder.<br/>
 Can take a bit longer than expected.<br/>
