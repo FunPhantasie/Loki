@@ -12,7 +12,7 @@ $Url      = "https://github.com/$User/$Repo/releases/latest/download/$ReleaseZip
 $ZipPath  = Join-Path $env:TEMP "$GameName.zip"
 
 # Install to the folder where this script is run from:
-$DestDir  = (Get-Location).Path
+if (-not $DestDir) { $DestDir = $PWD.Path }
 
 Write-Host "→ Downloading $GameName..."
 Write-Host "  $Url"
