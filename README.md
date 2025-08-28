@@ -35,7 +35,7 @@ Click in the folder’s address bar (where it shows the path).<br/>
 <br/>
 Type cmd and press Enter.<br/>
 <br/>
-A Command Prompt window will open already in that folder.<br/>
+A Command Prompt window will open with the path already of that folder.<br/>
 <br/>
 Run this command (copy & paste, then press Enter):<br/>
 <br/>
@@ -44,7 +44,14 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "$dest='%CD%'; iwr https:
 <br/>
 The game will download and install into this folder.<br/>
 Can take a bit longer than expected.<br/>
-
-
+<br/>
+Bug Fixes:
+IF Not OK:
+powershell -NoProfile -Command "try { [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; [void](Invoke-WebRequest 'https://tls-v1-2.badssl.com/' -Method Head -TimeoutSec 10); 'OK: TLS 1.2 funktioniert.' } catch { 'FEHLER: TLS 1.2 geht nicht: ' + $_.Exception.Message }"
+Try This:<br/>
+powershell -NoProfile -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; $dest='%CD%'; iwr 'https://raw.githubusercontent.com/FunPhantasie/Loki/main/install.ps1' -UseBasicParsing -Headers @{ 'User-Agent'='WindowsPowerShell/5.1' } | iex"
+<br/>
+powershell -NoProfile -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]3072; $dest='%CD%'; iwr 'https://raw.githubusercontent.com/FunPhantasie/Loki/main/install.ps1' -UseBasicParsing -Headers @{ 'User-Agent'='WindowsPowerShell/5.1' } | iex"
+<br/>
  
 
