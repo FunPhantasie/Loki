@@ -50,6 +50,7 @@ IF Not OK:<br/>
 <br/>
 powershell -NoProfile -Command "try { [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; [void](Invoke-WebRequest 'https://tls-v1-2.badssl.com/' -Method Head -TimeoutSec 10); 'OK: TLS 1.2 funktioniert.' } catch { 'FEHLER: TLS 1.2 geht nicht: ' + $_.Exception.Message }"
 <br/>
+<br/>
 Try This:
 <br/>
 powershell -NoProfile -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; $dest='%CD%'; iwr 'https://raw.githubusercontent.com/FunPhantasie/Loki/main/install.ps1' -UseBasicParsing -Headers @{ 'User-Agent'='WindowsPowerShell/5.1' } | iex"
