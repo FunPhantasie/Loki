@@ -54,7 +54,9 @@ Try This:
 <br/>
 powershell -NoProfile -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; $dest='%CD%'; iwr 'https://raw.githubusercontent.com/FunPhantasie/Loki/main/install.ps1' -UseBasicParsing -Headers @{ 'User-Agent'='WindowsPowerShell/5.1' } | iex"
 <br/>
+<br/>
 When Geht nicht.
+<br/>
 <br/>
 powershell -NoProfile -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]3072; $dest='%CD%'; iwr 'https://raw.githubusercontent.com/FunPhantasie/Loki/main/install.ps1' -UseBasicParsing -Headers @{ 'User-Agent'='WindowsPowerShell/5.1' } | iex"
 <br/>
